@@ -76,26 +76,34 @@ end
 
 --- auto complete brackets, parantheses, etc...
 
-local function complete(dv, characters)
-    local doc = dv.doc
-    local idx = dv.doc.last_selection
-    local line1, col1 = doc:get_selection_idx(idx)
-    doc:insert(line1, col1, characters)
-    doc:move_to_cursor(idx, idx)
+local function complete(dv, s, e)
+    if dv.doc:has_selection() then
+      local text = dv.doc:get_text(dv.doc:get_selection())
+      dv.doc:text_input(s .. text .. e)
+    else
+      local doc = dv.doc
+      local idx = dv.doc.last_selection
+      local line1, col1 = doc:get_selection_idx(idx)
+      doc:insert(line1, col1, s .. e)
+      doc:move_to_cursor(idx, idx)
+    end
 end
 
 command.add("core.docview!", {
   ["code_plus:complete_brackets"] = function(dv)
-    complete(dv, "[]")
+    complete(dv, "[", "]")
   end,
   ["code_plus:complete_curly_brackets"] = function(dv)
-    complete(dv, "{}")
+    complete(dv, "{", "}")
   end,
   ["code_plus:complete_parantheses"] = function(dv)
-    complete(dv, "()")
+    complete(dv, "(", ")")
   end,
   ["code_plus:complete_quotation_marks"] = function(dv)
-    complete(dv, '""')
+    complete(dv, '"', '"')
+  end,
+  ["code_plus:complete_single_quotation_marks"] = function(dv)
+    complete(dv, "'", "'")
   end,
 })
 
@@ -105,6 +113,6 @@ keymap.add {
   ["altgr+7"] = "code_plus:complete_curly_brackets",
   ["ctrl+alt+7"] = "code_plus:complete_curly_brackets",
   ["shift+8"] = "code_plus:complete_parantheses",
-  ["shift+2"] = "code_plus:complete_quotation_marks"
+  ["shift+2"] = "code_plus:complete_quotation_marks",
 }
 
