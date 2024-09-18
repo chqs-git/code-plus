@@ -8,7 +8,7 @@
 
 ## Demonstration
 
-![Code+ demo](https://dcs99ww84zr4t.cloudfront.net/e8zdm7%2Fpreview%2F60821783%2Fmain_large.gif?response-content-disposition=inline%3Bfilename%3D%22main_large.gif%22%3B&response-content-type=image%2Fgif&Expires=1726412344&Signature=FcH-xLXO7ra51NxhbjKW-bc0g4kLsPX3LhcBvBwLJwRZ73mqtq5XvaL3KoUQPylhGtFwRbnMb6Tg91r5ky-B-iw2UNJkIRq641P8EEsWMktfHRDfjNEOGhbl9TsTlb5ZSZZW4oXA8TtY3e4-u93CLc1nHOJ6shD5VEWUFfSfPFLAVybrj~Q110i7Y-g~oBOw0vGyaBJrQ76XOcIfSraRPoS~OE3wyMgGOvjU2c2gZL-CbhG177tJBh2dVSjFXlyt3VUfKy7fxIlCqq~f3M-fw1MMH2EqsiSZWfO4YnncPMNs0jLHQN4-17Belq0rS4-TXe~7XKMBAEREugaRITetWQ__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ)
+![Code+ demo](https://github.com/chqs-git/media/blob/main/code_plus_demo.gif)
 
 ## Instalation
 Navigate to the `data/plugins` folder and run the following command:
