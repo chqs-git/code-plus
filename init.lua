@@ -30,6 +30,13 @@ config.plugins.code_plus = common.merge({
       type = "color",
       default = "#EF6385"
     },
+    {
+      label = "Enable Autocomplete",
+      description = "Standard autocomplete for an EU keyboard layout.",
+      path = "autocomplete_enabled",
+      type = "toggle",
+      default = true
+    },
   }
 }, config.plugins.code_plus)
 
@@ -75,8 +82,11 @@ function DocView:draw_line_text(line, x, y)
 end
 
 --- auto complete brackets, parantheses, etc...
-
 local function complete(dv, s, e)
+    if not config.plugins.code_plus.enabled or not config.plugins.code_plus.autocomplete_enabled then
+      return
+    end
+  
     if dv.doc:has_selection() then
       local text = dv.doc:get_text(dv.doc:get_selection())
       dv.doc:text_input(s .. text .. e)
