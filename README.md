@@ -3,8 +3,8 @@
 
 ## Basic usage
 
- Highlight comments with special properties using the **@Todo(...)** and **@Fixme(...)** keywords for an enhanced coding experience. 
- Streamline coding by auto-completing brackets, parentheses, quotation marks reducing manual effort and improving the writing code experience.
+ Highlight comments with special properties using the **@Todo(...)** and **@Fixme(...)** keywords for an enhanced coding experience.
+ Basic auto-complete features like brackets, parentheses and quotation marks for an EU keyboard layout. Autocomplete can be disabled to enable compatibility with other plugins with autocomplete and other keyboard layouts.
 
 ## Demonstration
 
